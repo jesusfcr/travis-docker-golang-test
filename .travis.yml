@@ -2,9 +2,9 @@ dist: focal
 language: shell
 services:
   - docker
-before_script:
-  - sudo service docker restart
 script:
-  - docker pull golang:1.16-alpine
   - docker pull alpine:latest
+  - docker pull kristophjunge/test-saml-idp:latest
+  - docker pull postgres:13
+  - docker pull golang:1.16-alpine
   - echo "Done!!!!"
