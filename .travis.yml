@@ -2,6 +2,8 @@ dist: focal
 language: shell
 services:
   - docker
+before_script:
+  - sudo service docker restart
 script:
   - docker pull golang:1.16-alpine
   - docker pull alpine:latest
