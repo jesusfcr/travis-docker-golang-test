@@ -8,4 +8,4 @@ script:
   - docker pull postgres:13
   - docker pull golang:1.16-alpine
   - docker pull golang:1.13-alpine3.10
-  - echo "Done!!!"
+  - echo "Done!!"
