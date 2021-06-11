@@ -4,6 +4,5 @@ services:
   - docker
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker pull alpine:latest
-  - docker pull golang:1.13-alpine3.10
+  - docker pull postgres:11
   - docker build .
