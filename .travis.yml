@@ -3,6 +3,9 @@ language: shell
 services:
   - docker
 script:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin registry-1.docker.io
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin registry-1.docker.io
   - docker version
+  - docker images
+  - docker system prune --all
+  - docker images
   - docker build .
